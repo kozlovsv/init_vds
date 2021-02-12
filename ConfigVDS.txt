@@ -1,0 +1,42 @@
+apt-get update && apt-get upgrade
+apt-get install nginx
+systemctl enable nginx
+
+apt-get install chrony
+timedatectl set-timezone Europe/Moscow
+systemctl enable chrony
+
+apt-get install mariadb-server mariadb-client
+systemctl enable mariadb
+mysql_secure_installation
+Создать базу данных.
+Убрать авторизацию по сокету
+Добавить из консоли юзера. Иначе не видит пароль.
+
+
+apt-get install php php-fpm php-common php-mysql php-gd php-cli php7.2-mbstring php-xml
+apt-get install 
+systemctl enable php7.2-fpm
+
+
+/etc/php/7.2/fpm/php.ini
+
+post_max_size = 1G
+upload_max_filesize = 512M
+short_open_tag = On
+date.timezone = "Europe/Moscow"
+Asia/Yekaterinburg
+
+
+
+apt install redis-server
+
+
+useradd www-user -G www-data -m
+passwd www-user 
+
+apt install git
+
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+composer self-update
