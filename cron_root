@@ -1,0 +1,16 @@
+#.---------------- минута (0 - 59)
+#| .-------------- час (0 - 23)
+#| | .------------ день месяца (1 - 31)
+#| | | .---------- месяц (1 - 12) ИЛИ jan,feb,mar ...
+#| | | | .-------- день недели (0 - 6) (Воскресенье=0 или 7) ИЛИ sun,mon,tue ...
+#| | | | |
+#* * * * * команда для выполнения
+
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=kozlovsv78@gmail.com
+HOME=/
+
+# run-parts
+
+05 10 * * * docker exec bmauto-php php yii out-budget > /dev/null
