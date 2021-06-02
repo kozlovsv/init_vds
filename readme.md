@@ -33,7 +33,7 @@
 7. Устанавливаем на хост машину нужную временную зону timedatectl set-timezone Asia/Almaty.
 8. Если необходима настройка бакапов
    - Устанавливаем утилиту msmtp для отправки сообщений о бакапе на почту apt install msmtp
-   - Из папки backup в папку /root переписываем и возможно донастраиваем файл настройки msmtp backup/.msmtprc -> /root/.msmtprc
+   - Из папки backup в папку /etc переписываем и возможно донастраиваем файл настройки msmtp backup/msmtprc -> /etc/msmtprc
    - Из папки backup в папку /usr/local/bin/ переписываем скрипты резервного копирования sbackup.sh и supload.sh. Файл sbackup.sh донастраиваем по необходимости.
    - Ставим задачу в крон на резервное копирование 
      20      05      *       *       *       /usr/local/bin/sbackup.sh > /dev/null
